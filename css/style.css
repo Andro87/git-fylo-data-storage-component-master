@@ -1,0 +1,227 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: "raleway";
+    src: url("../fonts/Raleway-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face{
+    font-family: "raleway";
+    src: url("../fonts/Raleway-Regular.ttf");
+    font-weight: 400;
+}
+
+body{
+    background: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+    background-color:hsl(229, 57%, 11%) ;
+}
+
+.section{
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    padding-left:100px;
+    justify-content: center;
+}
+
+.box--icon{
+    background-color:  hsl(228, 56%, 26%);
+    padding:25px 85px 25px 25px ;
+    border-radius: 10px 110px 10px 10px;
+}
+
+.box--storage{
+    background-color:  hsl(228, 56%, 26%);
+    padding:25px;
+    border-radius: 10px;
+    font-family: "raleway";
+    font-weight: 400px;
+    color: hsl(243, 100%, 93%);
+    font-size: 14px;
+    width: 40%; 
+    height: 140px;
+    align-self: flex-end;
+}
+
+.margin{
+    margin-left: 25px;
+}
+
+.icon{
+    display: flex;
+    margin-top:20px;
+    padding: 15px;
+}
+
+.image{
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.number{
+    font-family:"raleway";
+    font-weight: 700;
+}
+
+
+.track{
+    background-color: hsl(229, 57%, 11%);
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    padding: 2px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.progress{
+    width: 75%;
+    background:linear-gradient(to right, hsl(6, 100%, 80%) ,hsl(335, 100%, 65%));
+    border-radius: 8px;
+    padding: 2px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.progress:after{
+    content: "";
+    background-color:hsl(243, 100%, 93%);
+    width: 12px;
+    border-radius: 50%;
+}
+
+.values{
+    display: flex;
+    justify-content: space-between;
+    font-family:"raleway";
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 180px;
+    margin-top: 15px;
+}
+
+.remain{
+    background-color: white;
+    color:hsl(229, 57%, 11%);
+    font-family: "raleway";
+    font-weight: 700;
+    font-size: 24px;
+    padding: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px 5px 0px 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-top: 20px solid white;
+    border-left: 20px solid transparent;
+    align-self: flex-end;
+}
+
+.grey{
+    color: hsl(229, 7%, 55%);
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+
+
+
+@media only screen and (max-width:768px){
+
+    body{
+        background: url("../images/bg-mobile.png");
+        background-size: 100%;
+    }
+
+    .section{
+      padding: 135px 25px;
+      display: block;
+    }
+    
+    .container{
+        display: block;
+        padding-left: 0px;
+    }
+
+    .box--icon{
+        padding:45px;
+    }
+
+    .box--storage{
+        padding:35px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .margin{
+        margin-top: 18px;
+        margin-left: 0;
+    }
+
+    .icon{
+        padding: 0;
+    }
+
+    .box--storage p{
+        text-align: center;
+    }
+
+    .wrap{
+        margin-top: 0;
+        width: 100%;
+        position: inherit;
+        display: block;
+        margin-top: 0;
+    }
+
+    .remain{
+        font-size: 36px;
+        padding: 20px;
+        width: 60%;
+        height: auto;
+        border-radius: 10px;
+        position: relative;
+        transform: translateY(-50%);
+        margin:20px auto;
+        justify-content: center;
+    }
+
+    .triangle{
+        display: none;
+    }
+
+}
